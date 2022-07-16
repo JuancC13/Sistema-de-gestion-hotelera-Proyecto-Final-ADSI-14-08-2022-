@@ -14,11 +14,10 @@ return new class extends Migration
     public function up()
     {
         //Al ejecutar migraciones con php artisan migrate se generara la siguiente tabla
-        Schema::create('tipo_habitacions', function (Blueprint $table) {
-            //Al ejecutar migraciones con php artisan migrate se generaran la siguientes campos en la tabla
+        Schema::create('habitacions', function (Blueprint $table) {
+        //Al ejecutar migraciones con php artisan migrate se generaran la siguientes campos en la tabla
             $table->id();
             $table->string('title');
-            $table->text('derail');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_habitacions');
+        Schema::dropIfExists('habitacions');
     }
 };
