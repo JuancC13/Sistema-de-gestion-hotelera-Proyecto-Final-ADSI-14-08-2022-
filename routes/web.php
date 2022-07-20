@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TipoHabitacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Pagina de inicio
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('admin', function () {
+//Pagina Dashboard
+Route::get('administrador', function () {
     return view('dashboard');
 });
+
+//Rutas de Tipos de Habitaciones
+Route::get('admin/tipohabitacion/{id}/delete',[TipoHabitacionController::class,'destroy']);
+Route::resource('admin/tipohabitacion',TipoHabitacionController::class);
+
+
+

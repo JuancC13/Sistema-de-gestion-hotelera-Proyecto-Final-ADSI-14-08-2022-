@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.masterDashboard')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
