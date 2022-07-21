@@ -12,6 +12,6 @@ class Habitacion extends Model
     function TipoHabitacion()
     {
         //Con esto recojo datos de otra migración al conectarle y vincularle con esta tabla
-        return $this->belongsTo(TipoHabitacion::class, 'tipohabitacion_id');
+        return $this->belongsTo(TipoHabitacion::class, 'tipo_habitacion_id');
     }
 }

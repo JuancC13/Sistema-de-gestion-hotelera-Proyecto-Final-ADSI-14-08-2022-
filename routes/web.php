@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TipoHabitacionController;
+use App\Http\Controllers\HabitacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +29,7 @@ Route::get('administrador', function () {
 Route::get('admin/tipohabitacion/{id}/delete',[TipoHabitacionController::class,'destroy']);
 Route::resource('admin/tipohabitacion',TipoHabitacionController::class);
 
-
+//Rutas de Habitaciones
+Route::get('admin/habitaciones/{id}/delete',[HabitacionController::class,'destroy']);
+Route::resource('admin/habitaciones',HabitacionController::class);
 

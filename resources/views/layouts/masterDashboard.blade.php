@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="admin/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="admin/css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url('administrador')}}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -44,9 +44,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{url('administrador')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Tablero</span></a>
             </li>
 
             <!-- Divider -->
@@ -54,20 +54,35 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Masters
+                Manager
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Menu desplegable de tipos de habitacions -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                <a class="nav-link @if(!request()->is('admin/tipohabitacion*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#tipoHabitacionManager"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-bed"></i>
-                    <span>Typo de habitación</span>
+                    <span>Tipo de habitación</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="tipoHabitacionManager" class="collapse @if(request()->is('admin/tipohabitacion*')) show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="{{url('admin/tipohabitacion/create')}}">Añadir nueva &nbsp; &nbsp; <i class="fas fa-plus"></i></a>
                         <a class="collapse-item" href="{{url('admin/tipohabitacion')}}">Ver todo &nbsp; &nbsp; <i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Menu desplegable de habitacions -->
+            <li class="nav-item">
+                <a class="nav-link @if(!request()->is('admin/habitaciones*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#habitacionManager"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-hotel"></i>
+                    <span>Habitaciones</span>
+                </a>
+                <div id="habitacionManager" class="collapse @if(request()->is('admin/habitaciones*')) show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{url('admin/habitaciones/create')}}">Añadir nueva &nbsp; &nbsp; <i class="fas fa-plus"></i></a>
+                        <a class="collapse-item" href="{{url('admin/habitaciones')}}">Ver todo &nbsp; &nbsp; <i class="fas fa-search"></i></a>
                     </div>
                 </div>
             </li>
