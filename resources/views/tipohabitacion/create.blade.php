@@ -24,6 +24,10 @@
                                     <td><input type="text" name="titulo" class="form-control"></td>
                                 </tr>
                                 <tr>
+                                    <th>Precio por día</th>
+                                    <td><input type="number" name="price" class="form-control"></td>
+                                </tr>
+                                <tr>
                                     <th>Detalles</th>
                                     <td><textarea name="detalle" class="form-control"></textarea></td>
                                 </tr>

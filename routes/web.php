@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TipoHabitacionController;
 use App\Http\Controllers\HabitacionController;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,6 @@ Route::resource('admin/tipohabitacion',TipoHabitacionController::class);
 Route::get('admin/habitaciones/{id}/delete',[HabitacionController::class,'destroy']);
 Route::resource('admin/habitaciones',HabitacionController::class);
 
+//Rutas de Clientes
+Route::get('admin/cliente/{id}/delete',[ClienteController::class,'destroy']);
+Route::resource('admin/cliente',ClienteController::class);

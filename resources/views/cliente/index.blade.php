@@ -6,8 +6,8 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">DataTables Example
-                    <a href="{{url('admin/tipohabitacion/create')}}" class="float-right btn btn-success btn-sm">Añadir nueva</a>
+                <h6 class="m-0 font-weight-bold text-primary">Clientes
+                    <a href="{{url('admin/cliente/create')}}" class="float-right btn btn-success btn-sm">Añadir nueva</a>
                 </h6>
             </div>
             <div class="card-body">
@@ -19,16 +19,22 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Tipo de habitación</th>
-                                <th>Precio por día</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Celular</th>
+                                <th>Foto</th>
+                                <th>Dirección</th>
                                 <th>Acción</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>#</th>
-                                <th>Tipo de habitación</th>
-                                <th>Precio por día</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Celular</th>
+                                <th>Foto</th>
+                                <th>Dirección</th>
                                 <th>Acción</th>
                             </tr>
                         </tfoot>
@@ -38,12 +44,15 @@
                                 @foreach ($data as $d)
                                     <tr>
                                         <td>{{$d->id}}</td>
-                                        <td>{{$d->title}}</td>
-                                        <td>{{$d->price}}</td>
+                                        <td>{{$d->full_name}}</td>
+                                        <td>{{$d->email}}</td>
+                                        <td>{{$d->mobile}}</td>
+                                        <td><img style="width: 10vw;" src="{{url('../storage/app/'.$d->photo)}}"></td>
+                                        <td>{{$d->address}}</td>
                                         <td>
-                                            <a href="{{url('admin/tipohabitacion/'.$d->id)}}" class=" btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-                                            <a href="{{url('admin/tipohabitacion/'.$d->id).'/edit'}}" class=" btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-                                            <a onclick="return confirm('¿Esta seguro que desea eliminar el registro selecionado?')" href="{{url('admin/tipohabitacion/'.$d->id).'/delete'}}" class=" btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                            <a href="{{url('admin/cliente/'.$d->id)}}" class=" btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                            <a href="{{url('admin/cliente/'.$d->id).'/edit'}}" class=" btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                            <a onclick="return confirm('¿Esta seguro que desea eliminar el registro selecionado?')" href="{{url('admin/cliente/'.$d->id).'/delete'}}" class=" btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

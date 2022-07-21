@@ -38,6 +38,7 @@ class TipoHabitacionController extends Controller
     {
         $data=new TipoHabitacion;
         $data->title=$request->titulo;
+        $data->price=$request->price;
         $data->derail=$request->detalle;
         $data->save();
 
@@ -79,6 +80,7 @@ class TipoHabitacionController extends Controller
     {
         $data=TipoHabitacion::find($id);
         $data->title=$request->title;
+        $data->price=$request->price;
         $data->derail=$request->detalle;
         $data->save();
 

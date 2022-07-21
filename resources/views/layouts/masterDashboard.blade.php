@@ -87,6 +87,21 @@
                 </div>
             </li>
 
+            <!-- Nav Item - Menu desplegable de Clientes -->
+            <li class="nav-item">
+                <a class="nav-link @if(!request()->is('admin/cliente*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#clienteManager"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Clientes</span>
+                </a>
+                <div id="clienteManager" class="collapse @if(request()->is('admin/cliente*')) show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{url('admin/cliente/create')}}">Añadir nuevo &nbsp; &nbsp; <i class="fas fa-plus"></i></a>
+                        <a class="collapse-item" href="{{url('admin/cliente')}}">Ver todo &nbsp; &nbsp; <i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

@@ -15,12 +15,16 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Titulo</th>
+                                    <th>Tipo de Habitación</th>
                                     <td>{{$data->title}}</td>
                                 </tr>
                                 <tr>
                                     <th>Detalles</th>
                                     <td>{{$data->derail}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Precio por día</th>
+                                    <td>{{$data->price}}</td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">

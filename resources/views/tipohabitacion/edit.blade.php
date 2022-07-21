@@ -25,6 +25,10 @@
                                     <td><input value="{{$data->title}}"  name="title" type="text" class="form-control"></td>
                                 </tr>
                                 <tr>
+                                    <th>Precio por día</th>
+                                    <td><input value="{{$data->price}}"  name="price" type="number" class="form-control"></td>
+                                </tr>
+                                <tr>
                                     <th>Detalles</th>
                                     <td><textarea name="detalle" class="form-control">{{$data->derail}}</textarea></td>
                                 </tr>
