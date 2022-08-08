@@ -42,6 +42,7 @@ class ClienteController extends Controller
             'password'=>'required',
             'mobile'=>'required',
             'photo'=>'required',
+            'noches'=>'required',
         ]);
 
         $imgPath=$request->file('photo')->store('public/imgs');
@@ -51,6 +52,7 @@ class ClienteController extends Controller
         $data->password=sha1($request->password);
         $data->mobile=$request->mobile;
         $data->address=$request->address;
+        $data->noches=$request->noches;
         $data->photo=$imgPath;
         $data->save();
 
@@ -94,6 +96,7 @@ class ClienteController extends Controller
             'full_name'=>'required',
             'email'=>'required|email',
             'mobile'=>'required',
+            'noches'=>'required',
         ]);
 
         if($request->hasFile('photo'))
@@ -110,6 +113,7 @@ class ClienteController extends Controller
         $data->email=$request->email;
         $data->mobile=$request->mobile;
         $data->address=$request->address;
+        $data->noches=$request->noches;
         $data->photo=$imgPath;
         $data->save();
 

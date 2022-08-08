@@ -141,7 +141,7 @@
             <li class="nav-item">
                 <a class="nav-link @if(!request()->is('admin/tipoempleado*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#tipoempleadoManager"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-tags"></i>
+                    <i class="fas fa-fw fa-address-card"></i>
                     <span>Tipo de Empleados</span>
                 </a>
                 <div id="tipoempleadoManager" class="collapse @if(request()->is('admin/tipoempleado*')) show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -157,7 +157,7 @@
             <li class="nav-item">
                 <a class="nav-link @if(!request()->is('admin/empleado*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#empleadoManager"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-coffee"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Empleados</span>
                 </a>
                 <div id="empleadoManager" class="collapse @if(request()->is('admin/empleado*')) show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -168,6 +168,20 @@
                 </div>
             </li>
 
+            <!-- Nav Item - Menu desplegable de Facturas -->
+            <li class="nav-item">
+                <a class="nav-link @if(!request()->is('admin/factura*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#facturaManager"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-sticky-note"></i>
+                    <span>Facturas</span>
+                </a>
+                <div id="facturaManager" class="collapse @if(request()->is('admin/factura*')) show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{url('admin/factura/create')}}">Añadir nuevo &nbsp; &nbsp; <i class="fas fa-plus"></i></a>
+                        <a class="collapse-item" href="{{url('admin/factura')}}">Ver todo &nbsp; &nbsp; <i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </li>
 
 
 

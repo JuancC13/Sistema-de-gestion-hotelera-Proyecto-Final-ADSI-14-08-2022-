@@ -39,6 +39,10 @@
                                     <td>{{$data->address}}</td>
                                 </tr>
                                 <tr>
+                                    <th>Noches</th>
+                                    <td>{{$data->noches}}</td>
+                                </tr>
+                                <tr>
                                     <td colspan="2">
                                         <input type="submit" class="btn btn-primary">
                                     </td>

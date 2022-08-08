@@ -30,7 +30,7 @@
                                 </tr>
                                 <tr>
                                     <th>Detalles</th>
-                                    <td><textarea name="detalle" class="form-control">{{$data->detail}}</textarea></td>
+                                    <td><textarea name="detail" class="form-control">{{$data->detail}}</textarea></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">

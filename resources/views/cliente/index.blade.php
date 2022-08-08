@@ -24,6 +24,7 @@
                                 <th>Celular</th>
                                 <th>Foto</th>
                                 <th>Dirección</th>
+                                <th>Noches</th>
                                 <th>Acción</th>
                             </tr>
                         </thead>
@@ -35,6 +36,7 @@
                                 <th>Celular</th>
                                 <th>Foto</th>
                                 <th>Dirección</th>
+                                <th>Noches</th>
                                 <th>Acción</th>
                             </tr>
                         </tfoot>
@@ -49,6 +51,7 @@
                                         <td>{{$d->mobile}}</td>
                                         <td><img style="width: 10vw;" src="{{url('../storage/app/'.$d->photo)}}"></td>
                                         <td>{{$d->address}}</td>
+                                        <td>{{$d->noches}}</td>
                                         <td>
                                             <a href="{{url('admin/cliente/'.$d->id)}}" class=" btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
                                             <a href="{{url('admin/cliente/'.$d->id).'/edit'}}" class=" btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>

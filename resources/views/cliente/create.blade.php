@@ -30,6 +30,10 @@
                                     <td><input type="text" name="full_name" class="form-control"></td>
                                 </tr>
                                 <tr>
+                                    <th>Noches<span class="text-danger">*</span></th>
+                                    <td><input type="text" name="noches" class="form-control"></td>
+                                </tr>
+                                <tr>
                                     <th>Correo Electronico <span class="text-danger">*</span></th>
                                     <td><input type="email" name="email" class="form-control"></td>
                                 </tr>

@@ -9,6 +9,7 @@ use App\Http\Controllers\TipoServicioController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\TipoEmpleadoController;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\FacturaController;
 
 
 /*
@@ -67,3 +68,7 @@ Route::resource('admin/tipoempleado',TipoEmpleadoController::class);
 //Rutas de Empleados
 Route::get('admin/empleado/{id}/delete',[EmpleadoController::class,'destroy']);
 Route::resource('admin/empleado',EmpleadoController::class);
+
+//Rutas de Facturas
+Route::get('admin/factura/{id}/delete',[FacturaController::class,'destroy']);
+Route::resource('admin/factura',FacturaController::class);

@@ -31,6 +31,10 @@
                                     <td><input value="{{$data->full_name}}"  name="full_name" type="text" class="form-control"></td>
                                 </tr>
                                 <tr>
+                                    <th>Noches <span class="text-danger">*</span></th>
+                                    <td><input value="{{$data->noches}}"  name="noches" type="text" class="form-control"></td>
+                                </tr>
+                                <tr>
                                     <th>Email <span class="text-danger">*</span></th>
                                     <td><input value="{{$data->email}}"  name="email" type="email" class="form-control"></td>
                                 </tr>
